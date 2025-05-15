@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+  <title>Our Group Members</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>DYNAMOS</h1>
+    <p>BLAZING OUR WAY IN</p>
+  </header>
+
+  <section class="team-container">
+    <div class="member-card">
+      <img src="images/arshiya.jpg" alt="Member 1">
+      <h2>Arshiya T Sajan</h2>
+      <p>Team Leader</p>
+    </div>
+    
+
+    <div class="member-card">
+      <img src="images/jobel.jpg.jpg" alt="Member 3">
+      <h2>Jobel Manoj</h2>
+      <p>Vice Captain</p>
+    </div>
+    <div class="member-card">
+      <img src="images/nazrin.jpg.jpg" alt="Member 2">
+      <h2>Fathima Nazrin</h2>
+      <p></p>
+    </div>
+    <div class="member-card">
+      <img src="images/karthika.jpg.jpg" alt="Member 2">
+      <h2>Karthika M S</h2>
+      <p></p>
+    </div>
+    <div class="member-card">
+      <img src="images/aromaal.jpg" alt="Member 2">
+      <h2>Aromal</h2>
+      <p></p>
+    </div>
+    
+    <div class="member-card">
+      <img src="images/jacob.jpg.jpg" alt="Member 2">
+      <h2>Jacob Mark Mathew</h2>
+      <p></p>
+    </div>
+    <!-- Add more member cards here -->
+  </section>
+
+  <section class="points-table-section">
+    <h2>Team Points Table</h2>
+    <table class="points-table">
+      <thead>
+        <tr>
+          <th>Team Name</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Team Dynamoz</td>
+          <td><input type="number" min="0" id="alpha" data-team="alpha" value="0"></td>
+        </tr>
+        <tr>
+          <td>Team Octaforce</td>
+          <td><input type="number" min="0" id="bravo" data-team="bravo" value="0"></td>
+        </tr>
+        <tr>
+          <td>Team Risepoint</td>
+          <td><input type="number" min="0" id="charlie" data-team="charlie" value="0"></td>
+        </tr>
+        <tr>
+          <td>Team CompileCorps</td>
+          <td><input type="number" min="0" id="delta" data-team="delta" value="0"></td>
+        </tr>
+        <tr>
+          <td>Team Triumph</td>
+          <td><input type="number" min="0" id="echo" data-team="echo" value="0"></td>
+        </tr>
+        <tr>
+          <td>Team Nexarise</td>
+          <td><input type="number" min="0" id="foxtrot" data-team="foxtrot" value="0"></td>
+        </tr>
+        <tr>
+          <td>Team Suii</td>
+          <td><input type="number" min="0" id="Suii" data-team="Suii" value="0"></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <script>
+    // Load points from localStorage on page load
+    window.onload = function () {
+      const inputs = document.querySelectorAll('input[data-team]');
+      inputs.forEach(input => {
+        const team = input.dataset.team;
+        const savedPoints = localStorage.getItem(`points-${team}`);
+        if (savedPoints !== null) {
+          input.value = savedPoints;
+        }
+  
+        // Save to localStorage when value changes
+        input.addEventListener('input', () => {
+          localStorage.setItem(`points-${team}`, input.value);
+        });
+      });
+    };
+  </script>
+  
+</body>
+</html>

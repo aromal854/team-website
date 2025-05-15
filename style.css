@@ -1,0 +1,96 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #ffffff;
+    color: #333;
+  }
+  
+  header {
+    background-color: #aaa2a2;
+    color: rgb(251, 255, 0);
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 3.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .member-card {
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 220px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .member-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .member-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .member-card h2 {
+    margin: 0.5rem 0 0.2rem;
+    font-size: 1.2rem;
+  }
+  
+  .member-card p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #777;
+  }
+  .points-table-section {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .points-table-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .points-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 600px;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .points-table th,
+  .points-table td {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+  }
+  
+  .points-table input[type="number"] {
+    width: 60px;
+    padding: 0.4rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
